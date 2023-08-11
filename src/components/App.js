@@ -60,7 +60,8 @@ function App() {
 
   const [guess, setGuess] = useState("");
 
-  const getRandomEmoji = () => emojiData[Math.floor(Math.random() * emojiData.length)];
+  const getRandomEmoji = () => emojiData[Math.floor(Math.random() *
+    emojiData.length)];
   
   const [selectedEmoji, setSelectedEmoji] = useState(getRandomEmoji);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,7 +78,8 @@ function App() {
     if (s === selectedEmoji.text) {
       setModalMessage("Correct Guess!");
     } else {
-      setModalMessage(`Incorrect! The correct answer was "${selectedEmoji.text}".`);
+      setModalMessage(`Incorrect! The correct answer was
+        "${selectedEmoji.text}".`);
     }
     setIsModalOpen(true);
   };
